@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Store | Black Clover Republic</title>
+  <meta name="description" content="Support Black Clover Republic: Patreon membership with closed beta access, plus cosmetic server ranks at launch.">
+  <meta name="theme-color" content="#060405">
+  <meta property="og:title" content="Store | Black Clover Republic">
+  <meta property="og:description" content="Patreon membership with closed beta access, plus cosmetic server ranks at launch.">
+  <meta property="og:image" content="https://blackcloverrepublic.github.io/assets/img/og-image.jpg">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Grenze+Gotisch:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="store">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb reveal"><a href="index.html">Home</a> / Store</div>
+        <span class="kicker reveal">Support BCR</span>
+        <h1 class="reveal" style="--d:.06s">Store</h1>
+        <p class="lead reveal" style="--d:.12s">Back the mod's development and stand out in-game. Every purchase helps fund the mod and the server.</p>
+      </div>
+    </section>
+
+    <!-- Patreon -->
+    <section class="section section--tight">
+      <div class="container patreon-card reveal">
+        <div class="card"><div class="card__in">
+          <div>
+            <span class="kicker">Available now</span>
+            <h2 class="h2">BCR Patreon</h2>
+            <div class="price"><b>$5</b><span>/ month</span></div>
+            <p class="muted">One tier with everything included. It's also the guaranteed way into the closed beta (<span data-bind="release.betaWindow">Oct 16 – 23</span>).</p>
+            <div class="btn-row" style="margin-top:26px">
+              <a class="btn btn--patreon" href="#" data-href="links.patreon" target="_blank" rel="noopener"><span data-icon="patreon"></span>Become a patron</a>
+            </div>
+          </div>
+          <ul class="checklist">
+            <li>Closed beta access</li>
+            <li>Sneak peeks almost every day: spells, bosses, builds</li>
+            <li>Patron-only Discord channels: sneak peeks, suggestions, questions and chat</li>
+            <li>GIF permissions in the Discord</li>
+            <li>Patron-only giveaways, including server ranks and, later on, even your own custom magic type</li>
+            <li>Every suggestion and question read personally by the developer</li>
+          </ul>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- Ranks -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal" style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap">
+          <div>
+            <span class="kicker">Server ranks</span>
+            <h2 class="h2">Ranks at launch</h2>
+            <p class="lead">Show off your support with prefixes, cosmetics and effects. Ranks go on sale when the server launches publicly.</p>
+          </div>
+          <span class="example-flag" data-preview-flag>Preview · names, perks &amp; prices may change</span>
+        </div>
+        <div class="grid ranks" data-ranks></div>
+        <div class="note reveal" style="margin-top:28px">
+          <span data-icon="shield"></span>
+          <p>All ranks are <strong style="color:#fff">cosmetic only</strong> and follow the Minecraft Usage Guidelines. Nothing you can buy gives you a gameplay advantage over other players.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal"><span class="kicker">Questions</span><h2 class="h2">Store FAQ</h2></div>
+        <div class="faq">
+          <details class="reveal"><summary>When can I buy a rank?</summary><div>Ranks go on sale when the server launches publicly. Want something now? The Patreon tier is open and includes beta access.</div></details>
+          <details class="reveal"><summary>Do ranks carry over from the beta?</summary><div>The beta server is wiped before release. Beta testers keep their exclusive cosmetic armor piece as a thank-you.</div></details>
+          <details class="reveal"><summary>Does buying give me an advantage?</summary><div>No. Everything in the store is cosmetic, so the playing field stays fair for everyone.</div></details>
+          <details class="reveal"><summary>I have a problem with a purchase</summary><div>Ask in the <a href="#" data-href="links.discord" target="_blank" rel="noopener">Discord</a> and a staff member will help you out.</div></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/config.js"></script>
+  <script>
+    window.BCR_PAGE = [() => {
+      const C = window.BCR, I = window.BCR_ICONS;
+      const store = C.links.store;
+      document.querySelector("[data-ranks]").innerHTML = C.ranks.map((r, i) => `
+        <div class="rank reveal${r.featured ? " rank--featured" : ""}" style="--d:${i * 0.06}s">
+          <div class="card"><div class="card__in">
+            ${r.featured ? `<span class="rank__ribbon">Featured</span>` : ""}
+            <h3 class="rank__name" style="color:${r.color}">${r.name}</h3>
+            <span class="rank__tag" style="color:${r.color}">[${r.name}]</span>
+            <div class="rank__price"><b>$${r.price}</b><span>one-time</span></div>
+            <ul>${r.perks.map((p) => `<li>${I.check}<span>${p}</span></li>`).join("")}</ul>
+            ${store
+              ? `<a class="btn btn--block${r.featured ? "" : " btn--ghost"}" href="${store}" target="_blank" rel="noopener">Buy ${r.name}</a>`
+              : `<span class="btn btn--block" aria-disabled="true">${I.lock}At launch</span>`}
+          </div></div>
+        </div>`).join("");
+      if (store) document.querySelector("[data-preview-flag]").remove();
+    }];
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

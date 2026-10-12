@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Team | Black Clover Republic</title>
+  <meta name="description" content="Meet the Black Clover Republic staff team, see the Discord Magic Knight ranks and find out how to join the staff or media team.">
+  <meta name="theme-color" content="#060405">
+  <meta property="og:title" content="Team | Black Clover Republic">
+  <meta property="og:description" content="The people behind Black Clover Republic, and how to join them.">
+  <meta property="og:image" content="https://blackcloverrepublic.github.io/assets/img/og-image.jpg">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Grenze+Gotisch:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="team">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb reveal"><a href="index.html">Home</a> / Team</div>
+        <span class="kicker reveal">The squad</span>
+        <h1 class="reveal" style="--d:.06s">The Team</h1>
+        <p class="lead reveal" style="--d:.12s">The people building and running Black Clover Republic.</p>
+      </div>
+    </section>
+
+    <!-- Staff -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="grid staff-grid" data-staff></div>
+      </div>
+    </section>
+
+    <!-- Discord ranks -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Community ranks</span>
+          <h2 class="h2">Rise through the Magic Knights</h2>
+          <p class="lead">Chat in the Discord to level up and earn Magic Knight roles. You get a new role each time you reach a milestone, and <strong style="color:#fff">Royal Knight</strong> and above unlocks GIF permissions.</p>
+        </div>
+        <div class="ladder" data-ladder></div>
+        <div class="btn-row reveal" style="margin-top:44px">
+          <a class="btn btn--discord" href="#" data-href="links.discord" target="_blank" rel="noopener"><span data-icon="discord"></span>Start levelling up</a>
+          <span class="muted" data-discord-online style="align-self:center;font-size:15px"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join the team -->
+    <section class="section" id="join-team">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Work with us</span>
+          <h2 class="h2">Join the team</h2>
+        </div>
+        <div class="grid paths">
+          <div class="path reveal"><div class="card"><div class="card__in">
+            <span class="path__label" data-apps-status>Applications closed</span>
+            <h3>Staff team</h3>
+            <p>Moderators and helpers keep the server and Discord running smoothly. Applications open in rounds and are announced in the Discord.</p>
+            <p class="muted" style="font-size:14px">Take your time with your answers. Short, rushed or sloppy applications get skipped.</p>
+            <span data-apps-btn></span>
+          </div></div></div>
+          <div class="path path--main reveal" style="--d:.08s"><div class="card"><div class="card__in">
+            <span class="path__label">Paid · recruiting</span>
+            <h3>Media team</h3>
+            <p>Help record and edit short-form content for BCR's TikTok, YouTube and Instagram. You'll get the mod and server access early so you can capture footage. Pay depends on views.</p>
+            <p class="muted" style="font-size:14px">No social account needed. Everything is posted on BCR's own channels.</p>
+            <a class="btn" href="#" data-href="links.discord" target="_blank" rel="noopener"><span data-icon="film"></span>DM the owner on Discord</a>
+          </div></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/config.js"></script>
+  <script>
+    window.BCR_PAGE = [() => {
+      const C = window.BCR, I = window.BCR_ICONS;
+      // Staff cards
+      document.querySelector("[data-staff]").innerHTML = C.staff.map((m, i) => {
+        const tba = /^(tba|recruiting)$/i.test(m.name);
+        const avatar = m.mc
+          ? `<img src="https://mc-heads.net/avatar/${encodeURIComponent(m.mc)}/96" alt="${m.name}'s Minecraft skin" width="96" height="96" loading="lazy">`
+          : tba ? "?" : m.name.charAt(0).toUpperCase();
+        return `
+          <div class="staff reveal${m.group === "owner" ? " staff--owner" : ""}${tba ? " staff--tba" : ""}" style="--d:${i * 0.05}s">
+            <div class="card"><div class="card__in">
+              <div class="staff__avatar">${avatar}</div>
+              <h3>${m.name}</h3>
+              <div class="staff__role role-${m.group}">${m.role}</div>
+              ${m.bio ? `<p>${m.bio}</p>` : tba ? `<p>Coming soon</p>` : ""}
+            </div></div>
+          </div>`;
+      }).join("");
+
+      // Discord level ladder
+      const rungs = [
+        [1, "Magic Knight Initiate"], [5, "Junior Magic Knight"], [15, "Intermediate Magic Knight"], [25, "Senior Magic Knight"],
+        [45, "Royal Knight"], [55, "Grand Magic Knight"], [75, "Magic Knight Captain"], [100, "Wizard King"],
+      ];
+      document.querySelector("[data-ladder]").innerHTML = rungs.map(([lvl, name], i) => `
+        <div class="rung reveal" style="--d:${i * 0.05}s">
+          <div class="rung__bar${i === rungs.length - 1 ? " rung__bar--gold" : ""}" style="--h:${60 + i * 24}px;--w:${22 + i * 6}%">${lvl}</div>
+          <div><h4>${name}</h4><small>Level ${lvl}</small></div>
+        </div>`).join("");
+
+      // Staff applications
+      const open = C.links.staffApplicationsOpen;
+      document.querySelector("[data-apps-status]").textContent = open ? "Applications open" : "Applications closed";
+      document.querySelector("[data-apps-btn]").outerHTML = open
+        ? `<a class="btn" href="${C.links.staffApplications}" target="_blank" rel="noopener">${I.scroll}Apply now</a>`
+        : `<a class="btn btn--ghost" href="${C.links.discord}" target="_blank" rel="noopener">${I.discord}Get notified on Discord</a>`;
+    }];
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

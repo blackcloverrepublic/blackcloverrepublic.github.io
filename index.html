@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Black Clover Republic | Minecraft Magic Server &amp; Mod</title>
+  <meta name="description" content="Black Clover Republic is a custom Minecraft 1.21.1 mod and server: 30 grimoires, 162 spells, a full storyline with cutscenes, nine guild bases, dungeons and bosses. Closed beta starts October 16.">
+  <meta name="theme-color" content="#060405">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Black Clover Republic">
+  <meta property="og:description" content="30 grimoires. 162 spells. A full Black Clover storyline in Minecraft 1.21.1. Closed beta starts October 16.">
+  <meta property="og:image" content="https://blackcloverrepublic.github.io/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Grenze+Gotisch:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+  <div id="site-header"></div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__smoke" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="hero__slash" aria-hidden="true"></div>
+
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <div class="hero__tags reveal">
+            <span class="tag tag--live">Closed beta · <span data-bind="release.betaStartLabel">Oct 16</span></span>
+            <span class="tag">Minecraft <span data-bind="server.minecraftVersion">1.21.1</span></span>
+            <span class="tag">Custom mod</span>
+          </div>
+
+          <h1 class="hero__title reveal" style="--d:.08s">
+            <span class="line">Black Clover</span>
+            <span class="line accent">Republic</span>
+          </h1>
+
+          <p class="hero__sub reveal" style="--d:.16s">
+            Claim your grimoire and make your name in the Clover Kingdom.
+            <strong>30 magic types, 162 spells</strong>, a full storyline with cutscenes and
+            nine guild bases, all rebuilt from scratch for Minecraft 1.21.1.
+          </p>
+
+          <div class="btn-row reveal" style="--d:.24s">
+            <a class="btn" href="join.html#beta"><span data-icon="bolt"></span>Join the beta</a>
+            <a class="btn btn--ghost" href="#" data-href="links.trailer" target="_blank" rel="noopener"><span data-icon="play"></span>Watch the trailer</a>
+          </div>
+
+          <div class="ipbox reveal" style="--d:.32s">
+            <div class="ipbox__label"><small>Server address</small><span data-ip>Revealed at launch</span></div>
+            <div class="ipbox__status" data-status><span class="status-dot"></span>Loading</div>
+            <button type="button" data-copy-ip>Copy IP</button>
+          </div>
+        </div>
+
+        <div class="emblem reveal" style="--d:.1s" data-orrery>
+          <div class="emblem__glow" aria-hidden="true"></div>
+          <svg class="emblem__ring emblem__ring--outer" viewBox="0 0 500 500" aria-hidden="true">
+            <defs><path id="ringPath" d="M250,250 m-232,0 a232,232 0 1,1 464,0 a232,232 0 1,1 -464,0"/></defs>
+            <circle cx="250" cy="250" r="246" fill="none" stroke="rgba(255,60,60,.25)" stroke-width="1"/>
+            <circle cx="250" cy="250" r="218" fill="none" stroke="rgba(255,60,60,.18)" stroke-width="1"/>
+            <text><textPath href="#ringPath">Black Clover Republic ✦ Thirty Grimoires ✦ One Hundred Sixty-Two Spells ✦ The Kingdom Awaits ✦</textPath></text>
+          </svg>
+          <svg class="emblem__ring emblem__ring--inner" viewBox="0 0 500 500" aria-hidden="true">
+            <circle cx="250" cy="250" r="200" fill="none" stroke="rgba(255,51,65,.4)" stroke-width="1.2" stroke-dasharray="2 10"/>
+            <circle cx="250" cy="250" r="188" fill="none" stroke="rgba(255,51,65,.18)" stroke-width="1"/>
+          </svg>
+          <div class="orrery__orbit" data-orbit></div>
+          <a class="orrery__core" href="magic.html" data-orrery-link aria-label="Explore all 30 grimoires">
+            <span class="orrery__seal" data-seal aria-hidden="true"></span>
+            <span class="orrery__seal orrery__seal--inner" data-seal-inner aria-hidden="true"></span>
+            <span class="orrery__readout" data-readout><b>30</b><small>Grimoires</small></span>
+          </a>
+        </div>
+      </div>
+      <div class="scroll-cue">Scroll</div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <div class="stats">
+      <div class="stat reveal"><b data-bind="stats.grimoires">30</b><span>Grimoires</span></div>
+      <div class="stat reveal" style="--d:.06s"><b data-bind="stats.spells">162</b><span>Spells</span></div>
+      <div class="stat reveal" style="--d:.12s"><b data-bind="stats.guildBases">9</b><span>Guild bases</span></div>
+      <div class="stat reveal" style="--d:.18s"><b data-discord-members>3,000<em>+</em></b><span>Discord members</span></div>
+    </div>
+
+    <!-- ============ BETA COUNTDOWN ============ -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="card reveal"><div class="card__in" style="padding:clamp(28px,5vw,52px)">
+          <div class="countdown-wrap">
+            <div>
+              <span class="kicker">Closed beta</span>
+              <h2 class="h2" data-countdown-title>The beta opens in</h2>
+              <p class="lead">One week of bug hunting on a dedicated server with the full mod and storyline. Patreon supporters and giveaway winners get in, and every tester keeps an <strong style="color:#fff">exclusive cosmetic armor piece</strong>.</p>
+              <p class="countdown-note"><span data-bind="release.betaWindow"></span> · <span data-bind="release.betaNote"></span></p>
+            </div>
+            <div>
+              <div class="countdown" data-countdown>
+                <div class="countdown__unit"><b data-d>00</b><span>Days</span></div>
+                <div class="countdown__unit"><b data-h>00</b><span>Hours</span></div>
+                <div class="countdown__unit"><b data-m>00</b><span>Mins</span></div>
+                <div class="countdown__unit"><b data-s>00</b><span>Secs</span></div>
+              </div>
+              <div class="btn-row" style="margin-top:22px">
+                <a class="btn btn--block" href="join.html#beta">How to get in<span data-icon="arrow"></span></a>
+              </div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">The mod</span>
+          <h2 class="h2">A whole kingdom,<br>rebuilt from scratch</h2>
+          <p class="lead">BCR started on 1.16.5. For 1.21.1 it's been rewritten from the ground up, with new spells, new visual effects, new systems and a story to play through.</p>
+        </div>
+
+        <div class="grid features">
+          <article class="feature card card--hover reveal"><div class="card__in">
+            <span class="feature__num">01</span>
+            <div class="feature__icon" data-icon="book"></div>
+            <h3>30 grimoires · 162 spells</h3>
+            <p>From Fire and Lightning to Time, Spatial and Anti-Magic. Every magic type has its own spell set, and every spell's effects were redone from scratch.</p>
+          </div></article>
+
+          <article class="feature card card--hover reveal" style="--d:.06s"><div class="card__in">
+            <span class="feature__num">02</span>
+            <div class="feature__icon" data-icon="star"></div>
+            <h3>The grimoire ceremony</h3>
+            <p>Your journey starts in the tower. A cinematic cutscene rolls your magic type, and that grimoire is yours. Some magic is rarer than others.</p>
+          </div></article>
+
+          <article class="feature card card--hover reveal" style="--d:.12s"><div class="card__in">
+            <span class="feature__num">03</span>
+            <div class="feature__icon" data-icon="scroll"></div>
+            <h3>Storyline &amp; one central GUI</h3>
+            <p>A built-in storyline with NPCs and cutscenes, plus one menu for your stats, spell unlocks, quests, events and dungeons.</p>
+          </div></article>
+
+          <article class="feature card card--hover reveal"><div class="card__in">
+            <span class="feature__num">04</span>
+            <div class="feature__icon" data-icon="castle"></div>
+            <h3>The Clover Kingdom</h3>
+            <p>A 12,000 × 12,000 map with the Clover Castle, all nine guild bases and quest locations everywhere. Each guild base is packed with NPCs.</p>
+          </div></article>
+
+          <article class="feature card card--hover reveal" style="--d:.06s"><div class="card__in">
+            <span class="feature__num">05</span>
+            <div class="feature__icon" data-icon="skull"></div>
+            <h3>Dungeons &amp; bosses</h3>
+            <p>Clear dungeons and fight bosses in the arena, with fully reworked entities and highly detailed boss-fight effects.</p>
+          </div></article>
+
+          <article class="feature card card--hover reveal" style="--d:.12s"><div class="card__in">
+            <span class="feature__num">06</span>
+            <div class="feature__icon" data-icon="flame"></div>
+            <h3>Transformations</h3>
+            <p>Devil forms, Spirit Dive and the Water Valkyrie, each with its own cinematic transformation.</p>
+          </div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MAGIC MARQUEE ============ -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="kicker">Choose your magic</span>
+          <h2 class="h2">30 grimoires.<br>Which one is yours?</h2>
+        </div>
+      </div>
+      <div class="marquee reveal" data-marquee="0"></div>
+      <div class="marquee marquee--rev reveal" data-marquee="1" style="margin-top:14px"></div>
+      <div class="container center reveal" style="margin-top:44px">
+        <a class="btn" href="magic.html">Explore all grimoires<span data-icon="arrow"></span></a>
+      </div>
+    </section>
+
+    <!-- ============ TIKTOK ============ -->
+    <section class="section" id="tiktok">
+      <div class="container">
+        <div class="tt-head reveal">
+          <div>
+            <span class="kicker">Straight from the dev</span>
+            <h2 class="h2">Latest on TikTok</h2>
+            <p class="lead">Most sneak peeks drop on TikTok first: new spells, boss fights, transformations and cutscenes.</p>
+          </div>
+          <a class="tt-profile" href="#" data-href="links.tiktok" target="_blank" rel="noopener">
+            <span class="tt-profile__icon" data-icon="tiktok"></span>
+            <span><b data-tt-handle>@blackcloverrepublic</b><small data-tt-followers>Follow for sneak peeks</small></span>
+            <span class="btn btn--sm" style="margin-left:8px">Follow</span>
+          </a>
+        </div>
+        <div class="rail-wrap">
+          <div class="tt-rail" data-tt-clips></div>
+          <button class="rail-btn rail-btn--prev" type="button" data-rail-prev aria-label="Previous videos"><span data-icon="arrow"></span></button>
+          <button class="rail-btn rail-btn--next" type="button" data-rail-next aria-label="More videos"><span data-icon="arrow"></span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DEVLOGS ============ -->
+    <section class="section" id="devlogs">
+      <div class="container">
+        <div class="section-head reveal" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
+          <div>
+            <span class="kicker">On YouTube</span>
+            <h2 class="h2">Devlogs</h2>
+          </div>
+          <div class="socials" data-socials></div>
+        </div>
+        <div class="grid videos" data-videos></div>
+      </div>
+    </section>
+
+    <!-- ============ ROADMAP ============ -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Road to release</span>
+          <h2 class="h2">From rewrite to release</h2>
+        </div>
+        <div class="timeline">
+          <div class="tl-item reveal"><time>May 2026</time><div><h4>The rework begins</h4><p>BCR gets rebuilt from scratch: a new GUI, a quest system, a new magic tools system and all-new visual effects.</p></div></div>
+          <div class="tl-item reveal"><time>Jun 2026</time><div><h4>Ported to 1.21.1</h4><p>The mod moves to Minecraft 1.21.1. Devlog #1 shows off the new Lightning magic.</p></div></div>
+          <div class="tl-item reveal"><time>Jul 2026</time><div><h4>Guild bases &amp; Patreon</h4><p>First looks at the guild bases, and the Patreon opens with near-daily sneak peeks.</p></div></div>
+          <div class="tl-item reveal"><time>Aug – Oct</time><div><h4>All 30 magic types finished</h4><p>From Anti-Magic to Key Magic: 162 spells across 30 grimoires.</p></div></div>
+          <div class="tl-item reveal"><time>Oct 2026</time><div><h4>Cutscenes &amp; first trailer</h4><p>Cinematic cutscenes, reworked transformations and the first official trailer.</p></div></div>
+          <div class="tl-item reveal" data-at="2026-10-16T00:00:00Z"><time>Oct 16 – 23</time><div><h4>Closed beta</h4><p>Patrons and giveaway winners hunt bugs on the beta server. All data is wiped afterwards.</p></div></div>
+          <div class="tl-item reveal" data-at="2026-10-31T00:00:00Z"><time>End of Oct</time><div><h4>Public release</h4><p>The mod goes public. Download it right here on the site.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section">
+      <div class="container cta-band reveal">
+        <div class="card"><div class="card__in">
+          <div>
+            <span class="kicker">Get in early</span>
+            <h2 class="h2">Play before anyone else</h2>
+            <p class="lead">The Patreon tier gets you into the closed beta, plus everything that comes with it:</p>
+            <div class="btn-row" style="margin-top:28px">
+              <a class="btn btn--patreon" href="#" data-href="links.patreon" target="_blank" rel="noopener"><span data-icon="patreon"></span>Become a patron</a>
+              <a class="btn btn--ghost" href="#" data-href="links.discord" target="_blank" rel="noopener"><span data-icon="gift"></span>Win a spot</a>
+            </div>
+          </div>
+          <ul class="checklist">
+            <li>Closed beta access</li>
+            <li>Sneak peeks almost every day</li>
+            <li>Patron-only channels for sneak peeks, suggestions and questions</li>
+            <li>Patron-only giveaways, including server ranks</li>
+            <li>Questions and suggestions read personally by the developer</li>
+          </ul>
+        </div></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/magic-data.js"></script>
+  <script>
+    window.BCR_PAGE = [
+      // Hero orrery: all 30 grimoires orbiting a central seal
+      () => {
+        const wrap = document.querySelector("[data-orrery]");
+        if (!wrap) return;
+        const all = window.BCR_MAGIC, S = window.BCR_SIGIL;
+        const slug = (n) => n.toLowerCase().replace(/\s+/g, "-");
+        wrap.querySelector("[data-seal]").innerHTML = S("Anti-Magic Seal");
+        wrap.querySelector("[data-seal-inner]").innerHTML = S("Mana Zone");
+        const orbit = wrap.querySelector("[data-orbit]");
+        orbit.innerHTML = all.map((m, i) =>
+          `<a class="orrery__node" href="magic.html#${slug(m.name)}" tabindex="-1" aria-hidden="true" title="${m.name}" style="--a:${(i / all.length) * 360}deg;--mc:${m.color}" data-i="${i}"><span>${S(m.name)}</span></a>`
+        ).join("");
+        const nodes = [...orbit.children];
+        const readout = wrap.querySelector("[data-readout]");
+        const link = wrap.querySelector("[data-orrery-link]");
+        const show = (m) => {
+          nodes.forEach((n) => n.classList.remove("is-active"));
+          if (!m) {
+            readout.className = "orrery__readout";
+            readout.style.removeProperty("--rc");
+            readout.innerHTML = "<b>30</b><small>Grimoires</small>";
+            link.href = "magic.html";
+            return;
+          }
+          nodes[all.indexOf(m)].classList.add("is-active");
+          readout.className = "orrery__readout is-name";
+          readout.style.setProperty("--rc", m.color);
+          readout.innerHTML = `<b>${m.name}</b><small>${/magic$/i.test(m.name) ? "Grimoire" : "Magic"}</small>`;
+          link.href = "magic.html#" + slug(m.name);
+        };
+        // Cycle through the magic types; hovering a node shows that one instead
+        let i = 0, hovering = false;
+        const order = all.map((_, k) => k).sort(() => Math.random() - 0.5);
+        setInterval(() => {
+          if (hovering || document.hidden) return;
+          show(i % (order.length + 1) === order.length ? null : all[order[i % (order.length + 1)]]);
+          i++;
+        }, 2600);
+        nodes.forEach((n) => {
+          n.addEventListener("mouseenter", () => { hovering = true; show(all[+n.dataset.i]); });
+          n.addEventListener("mouseleave", () => { hovering = false; });
+        });
+      },
+      // TikTok rail arrows (shown only when the rail can scroll)
+      () => {
+        const wrap = document.querySelector(".rail-wrap");
+        if (!wrap) return;
+        const rail = wrap.querySelector(".tt-rail");
+        const prev = wrap.querySelector("[data-rail-prev]"), next = wrap.querySelector("[data-rail-next]");
+        const step = () => (rail.querySelector(".clip")?.offsetWidth || 180) * 2 + 32;
+        const update = () => {
+          const max = rail.scrollWidth - rail.clientWidth - 4;
+          prev.hidden = rail.scrollLeft <= 4;
+          next.hidden = rail.scrollLeft >= max;
+          wrap.classList.toggle("has-more", rail.scrollLeft < max);
+        };
+        prev.addEventListener("click", () => rail.scrollBy({ left: -step(), behavior: "smooth" }));
+        next.addEventListener("click", () => rail.scrollBy({ left: step(), behavior: "smooth" }));
+        rail.addEventListener("scroll", update, { passive: true });
+        window.addEventListener("resize", update);
+        setTimeout(update, 50);
+      },
+      // Magic marquee rows
+      () => {
+        const all = window.BCR_MAGIC;
+        const rows = [all.slice(0, 15), all.slice(15)];
+        document.querySelectorAll("[data-marquee]").forEach((el) => {
+          const list = rows[+el.dataset.marquee];
+          const pills = list.map((m) =>
+            `<a class="pill" href="magic.html#${encodeURIComponent(m.name.toLowerCase().replace(/\s+/g, "-"))}" style="--pc:${m.color}"><span style="color:${m.color}">${window.BCR_SIGIL(m.name)}</span>${m.name}</a>`
+          ).join("");
+          el.innerHTML = `<div class="marquee__track">${pills}${pills}</div>`;
+          el.querySelectorAll(".marquee__track > :nth-child(n+" + (list.length + 1) + ")").forEach((p) => p.setAttribute("aria-hidden", "true"));
+        });
+      },
+      // Timeline: highlight what's next
+      () => {
+        let marked = false;
+        document.querySelectorAll(".tl-item[data-at]").forEach((el) => {
+          if (Date.parse(el.dataset.at) > Date.now()) {
+            el.classList.add(marked ? "tl-item--future" : "tl-item--next");
+            marked = true;
+          }
+        });
+      },
+    ];
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

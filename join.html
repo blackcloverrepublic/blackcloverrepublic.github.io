@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Join | Black Clover Republic</title>
+  <meta name="description" content="How to join Black Clover Republic: closed beta access, installing the mod for Minecraft 1.21.1, server status and voting.">
+  <meta name="theme-color" content="#060405">
+  <meta property="og:title" content="How to Join | Black Clover Republic">
+  <meta property="og:description" content="Closed beta access, install guide and live server status.">
+  <meta property="og:image" content="https://blackcloverrepublic.github.io/assets/img/og-image.jpg">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Grenze+Gotisch:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="join">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb reveal"><a href="index.html">Home</a> / Join</div>
+        <span class="kicker reveal">Getting started</span>
+        <h1 class="reveal" style="--d:.06s">How to Join</h1>
+        <p class="lead reveal" style="--d:.12s">BCR opens with a closed beta, followed by the public release. Here's everything you need to get in.</p>
+      </div>
+    </section>
+
+    <!-- Status -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="grid status-grid reveal">
+          <div class="status-cell"><small>Server</small><b data-status><span class="status-dot"></span>Loading</b><span>Players: <span data-players>—</span></span></div>
+          <div class="status-cell"><small>Version</small><b>Java <span data-bind="server.minecraftVersion">1.21.1</span></b><span>Minecraft Java Edition</span></div>
+          <div class="status-cell"><small>Mod loader</small><b data-loader>TBA</b><span data-loader-note>Announced before release</span></div>
+          <div class="status-cell"><small>Release</small><b data-bind="release.publicRelease">End of October 2026</b><span>Beta: <span data-bind="release.betaWindow">Oct 16 – 23</span></span></div>
+        </div>
+        <div class="ipbox reveal" style="margin-top:20px">
+          <div class="ipbox__label"><small>Server address</small><span data-ip>Revealed at launch</span></div>
+          <button type="button" data-copy-ip>Copy IP</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beta -->
+    <section class="section" id="beta">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Closed beta · <span data-bind="release.betaWindow">Oct 16 – 23</span></span>
+          <h2 class="h2">Two ways into the beta</h2>
+          <p class="lead">Beta testers play on a dedicated server with the full mod and storyline loaded. The goal is to catch bugs before the public release. <span data-bind="release.betaNote"></span></p>
+        </div>
+
+        <div class="grid paths">
+          <div class="path path--main reveal"><div class="card"><div class="card__in">
+            <span class="path__label">Guaranteed access</span>
+            <h3>Become a patron</h3>
+            <p>The single Patreon tier (<strong style="color:#fff">$5/month</strong>) includes beta access, near-daily sneak peeks, patron-only channels and giveaways.</p>
+            <a class="btn btn--patreon" href="#" data-href="links.patreon" target="_blank" rel="noopener"><span data-icon="patreon"></span>Join on Patreon</a>
+          </div></div></div>
+          <div class="path reveal" style="--d:.08s"><div class="card"><div class="card__in">
+            <span class="path__label">Free</span>
+            <h3>Win a spot</h3>
+            <p>Beta spots are given away in the Discord. Extra spots get added when the community hits milestones, including TikTok follower goals, so turn on notifications and follow BCR on TikTok too.</p>
+            <a class="btn btn--discord" href="#" data-href="links.discord" target="_blank" rel="noopener"><span data-icon="discord"></span>Join the Discord</a>
+          </div></div></div>
+        </div>
+
+        <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:20px">
+          <div class="card reveal"><div class="card__in" style="padding:22px 24px"><h3 class="h3" style="font-size:18px;margin-bottom:6px">What you test</h3><p class="muted" style="font-size:15px">Storyline bugs, spells that cause FPS or server lag, and anything else that breaks.</p></div></div>
+          <div class="card reveal" style="--d:.06s"><div class="card__in" style="padding:22px 24px"><h3 class="h3" style="font-size:18px;margin-bottom:6px">Progress resets</h3><p class="muted" style="font-size:15px">All beta server data is wiped before the public release.</p></div></div>
+          <div class="card reveal" style="--d:.12s"><div class="card__in" style="padding:22px 24px"><h3 class="h3" style="font-size:18px;margin-bottom:6px">Your reward</h3><p class="muted" style="font-size:15px">Every beta tester keeps an exclusive cosmetic armor piece as a thank-you.</p></div></div>
+        </div>
+
+        <div class="note reveal" style="margin-top:20px">
+          <span data-icon="lock"></span>
+          <p><strong style="color:#fff">Don't share the beta mod.</strong> Giving it to people outside the beta isn't allowed, and posting it online gets it taken down and your account banned on the site you posted it to.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Install guide -->
+    <section class="section section--dark" id="install">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Install guide</span>
+          <h2 class="h2">Install BCR in five steps</h2>
+          <p class="lead">The mod downloads straight from this site. The goal is zero extra dependencies, so you just install the mod and play. If anything else turns out to be required, it'll be listed here at release.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal"><div class="card"><div class="card__in">
+            <span class="step__n">1</span>
+            <div><h3>Get Minecraft Java Edition</h3><p>BCR is a Java Edition mod for Minecraft <span data-bind="server.minecraftVersion">1.21.1</span>. Bedrock isn't supported.</p></div>
+            <span class="badge">Java <span data-bind="server.minecraftVersion">1.21.1</span></span>
+          </div></div></div>
+          <div class="step reveal" style="--d:.04s"><div class="card"><div class="card__in">
+            <span class="step__n">2</span>
+            <div><h3>Install the mod loader</h3><p data-loader-step>The mod loader is being finalized and will be announced before release.</p></div>
+            <span data-loader-badge class="badge badge--warn">TBA</span>
+          </div></div></div>
+          <div class="step reveal" style="--d:.08s"><div class="card"><div class="card__in">
+            <span class="step__n">3</span>
+            <div><h3>Download the BCR mod</h3><p>Grab the latest build of the mod. One file, no modpack needed.</p></div>
+            <span data-download></span>
+          </div></div></div>
+          <div class="step reveal" style="--d:.12s"><div class="card"><div class="card__in">
+            <span class="step__n">4</span>
+            <div><h3>Drop it in your mods folder</h3><p>Put the <code>.jar</code> file in your <code>mods</code> folder. On Windows, press <code>Win + R</code>, type <code>%appdata%\.minecraft</code> and open <code>mods</code> (create it if it doesn't exist).</p></div>
+            <span></span>
+          </div></div></div>
+          <div class="step reveal" style="--d:.16s"><div class="card"><div class="card__in">
+            <span class="step__n">5</span>
+            <div><h3>Launch &amp; play</h3><p>Start the game with the loader profile, then go to Multiplayer → Add Server and enter <code data-ip>Revealed at launch</code>. You can also start a singleplayer world.</p></div>
+            <span></span>
+          </div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vote -->
+    <section class="section" id="vote">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Support the server</span>
+          <h2 class="h2">Vote for BCR</h2>
+          <p class="lead">Votes push BCR up the server lists so more players find us.</p>
+        </div>
+        <div class="grid vote-grid" data-votes></div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container cta-band cta-band--actions reveal">
+        <div class="card"><div class="card__in">
+          <div>
+            <span class="kicker">Still stuck?</span>
+            <h2 class="h2">We've got answers</h2>
+            <p class="lead">Check the FAQ, or ask in the Discord. The community and staff are happy to help.</p>
+          </div>
+          <div class="btn-row" style="justify-content:flex-end">
+            <a class="btn" href="rules.html#faq">Read the FAQ<span data-icon="arrow"></span></a>
+            <a class="btn btn--ghost" href="#" data-href="links.discord" target="_blank" rel="noopener"><span data-icon="discord"></span>Ask on Discord</a>
+          </div>
+        </div></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/config.js"></script>
+  <script>
+    window.BCR_PAGE = [() => {
+      const C = window.BCR, I = window.BCR_ICONS;
+      // Loader
+      const loader = C.server.loader;
+      const known = loader && loader.toUpperCase() !== "TBA";
+      const sites = { neoforge: "https://neoforged.net/", forge: "https://files.minecraftforge.net/", fabric: "https://fabricmc.net/use/installer/" };
+      document.querySelectorAll("[data-loader]").forEach((el) => (el.textContent = known ? `${loader} ${C.server.loaderVersion}`.trim() : "TBA"));
+      document.querySelectorAll("[data-loader-note]").forEach((el) => (el.textContent = known ? "Required to run the mod" : "Announced before release"));
+      if (known) {
+        const url = sites[loader.toLowerCase()];
+        document.querySelector("[data-loader-step]").innerHTML =
+          `Install <strong style="color:#fff">${loader}${C.server.loaderVersion ? " " + C.server.loaderVersion : ""}</strong> for Minecraft ${C.server.minecraftVersion} with its official installer${url ? `: <a href="${url}" target="_blank" rel="noopener" style="color:#ffb3ad;text-decoration:underline">${url.replace("https://", "").replace(/\/$/, "")}</a>` : ""}.`;
+        const b = document.querySelector("[data-loader-badge]");
+        b.className = "badge badge--ok"; b.textContent = loader;
+      }
+      // Download
+      const dl = document.querySelector("[data-download]");
+      dl.outerHTML = C.release.modDownloadUrl
+        ? `<a class="btn btn--sm" href="${C.release.modDownloadUrl}">${I.download}Download ${C.release.modVersion}</a>`
+        : `<span class="btn btn--sm" aria-disabled="true">${I.lock}At release</span>`;
+      // Votes
+      const v = document.querySelector("[data-votes]");
+      v.innerHTML = C.voteSites.length
+        ? C.voteSites.map((s, i) => `<a class="vote card card--hover reveal" style="--d:${i * 0.05}s" href="${s.url}" target="_blank" rel="noopener"><div class="card__in"><div><small class="kicker" style="font-size:12px">Vote site ${i + 1}</small><h4>${s.name}</h4></div>${I.external}</div></a>`).join("")
+        : `<div class="card reveal" style="grid-column:1/-1"><div class="card__in" style="display:flex;gap:16px;align-items:center;padding:26px 28px"><span class="badge badge--warn">Soon</span><p class="muted">Vote sites go live once the server launches publicly. Check back at release.</p></div></div>`;
+    }];
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

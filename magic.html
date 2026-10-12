@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Magic &amp; Grimoires | Black Clover Republic</title>
+  <meta name="description" content="All 30 grimoires in the Black Clover Republic Minecraft mod: Anti-Magic, Time, Spatial, Fire, Water, Wind and more. 162 spells with brand-new effects.">
+  <meta name="theme-color" content="#060405">
+  <meta property="og:title" content="The Grimoires | Black Clover Republic">
+  <meta property="og:description" content="30 magic types. 162 spells. Find your grimoire.">
+  <meta property="og:image" content="https://blackcloverrepublic.github.io/assets/img/og-image.jpg">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Grenze+Gotisch:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="magic">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb reveal"><a href="index.html">Home</a> / Magic</div>
+        <span class="kicker reveal">Grimoire guide</span>
+        <h1 class="reveal" style="--d:.06s">The Grimoires</h1>
+        <p class="lead reveal" style="--d:.12s">30 magic types and 162 spells, each one rebuilt with brand-new effects for 1.21.1. Pick a grimoire to learn more and watch its showcase.</p>
+      </div>
+    </section>
+
+    <!-- How magic works -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="grid how-grid">
+          <div class="how card reveal"><div class="card__in"><b>I</b><h3>Get your grimoire</h3><p>In the tower, a cutscene rolls your magic type. That grimoire holds every spell you'll learn.</p></div></div>
+          <div class="how card reveal" style="--d:.06s"><div class="card__in"><b>II</b><h3>Unlock spells</h3><p>Unlock and manage spells from the central GUI, right next to your stats and quests.</p></div></div>
+          <div class="how card reveal" style="--d:.12s"><div class="card__in"><b>III</b><h3>Grow stronger</h3><p>Raise your stats, finish quests and clear dungeons to push your magic further.</p></div></div>
+          <div class="how card reveal" style="--d:.18s"><div class="card__in"><b>IV</b><h3>Transform</h3><p>Devil forms, spirit modes and other transformations, each with its own cutscene.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grimoire browser -->
+    <section class="section" id="grimoires" style="padding-top:24px">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">All 30 magic types</span>
+          <h2 class="h2">Find your magic</h2>
+        </div>
+
+        <div class="toolbar reveal">
+          <div class="chips" role="group" aria-label="Filter by type" data-chips></div>
+          <label class="search">
+            <span class="sr-only">Search magic</span>
+            <span data-icon="search"></span>
+            <input type="search" placeholder="Search magic…" data-search autocomplete="off">
+          </label>
+        </div>
+
+        <div class="grid magic-grid" data-grid></div>
+        <p class="empty" data-empty hidden>No magic found. Try another name.</p>
+      </div>
+    </section>
+
+    <!-- More than spells -->
+    <section class="section section--dark">
+      <div class="container split">
+        <div class="reveal">
+          <span class="kicker">Beyond the grimoire</span>
+          <h2 class="h2">More than spells</h2>
+          <p class="lead">Your grimoire is only the start. BCR's rework also rebuilt the tools, forms and fights that go with it.</p>
+          <div class="btn-row" style="margin-top:28px">
+            <a class="btn" href="index.html#devlogs">Watch the devlogs<span data-icon="arrow"></span></a>
+          </div>
+        </div>
+        <div class="panel-list">
+          <div class="card reveal"><div class="card__in"><span class="ico" data-icon="sword"></span><div><h4>Magic tools</h4><p>Magic tools come back on a brand-new system. Many abilities return, and plenty have been changed up.</p></div></div></div>
+          <div class="card reveal" style="--d:.06s"><div class="card__in"><span class="ico" data-icon="flame"></span><div><h4>Transformations</h4><p>Devil forms, spirit modes and valkyrie armor. The devil cutscene can be switched on with a gamerule.</p></div></div></div>
+          <div class="card reveal" style="--d:.12s"><div class="card__in"><span class="ico" data-icon="skull"></span><div><h4>Dungeons &amp; bosses</h4><p>Test your magic against reworked enemies and bosses with highly detailed fight effects.</p></div></div></div>
+          <div class="card reveal" style="--d:.18s"><div class="card__in"><span class="ico" data-icon="eye"></span><div><h4>Showcase videos</h4><p>Every magic type got its own showcase. Patrons see them first, and many reach Discord for free about two weeks later.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container cta-band cta-band--actions reveal">
+        <div class="card"><div class="card__in">
+          <div>
+            <span class="kicker">Closed beta</span>
+            <h2 class="h2">Try every grimoire first</h2>
+            <p class="lead">Beta testers get the full mod and storyline on a dedicated server, <span data-bind="release.betaWindow">Oct 16 – 23</span>.</p>
+          </div>
+          <div class="btn-row" style="justify-content:flex-end">
+            <a class="btn" href="join.html#beta">Get beta access<span data-icon="arrow"></span></a>
+          </div>
+        </div></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Grimoire modal -->
+  <div class="modal" data-modal aria-hidden="true">
+    <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="card"><div class="card__in">
+        <button class="modal__close" type="button" data-close aria-label="Close"><span data-icon="close"></span></button>
+        <div class="modal__head">
+          <span data-m-sigil></span>
+          <h2 id="modal-title"><span data-m-name></span><small data-m-group></small></h2>
+        </div>
+        <p class="modal__desc" data-m-desc></p>
+        <div class="modal__facts">
+          <div><small>Type</small><b data-m-type></b></div>
+          <div><small>Spells</small><b data-m-spells></b></div>
+          <div><small>Showcase</small><b data-m-where></b></div>
+        </div>
+        <div class="btn-row" data-m-actions></div>
+      </div></div>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/magic-data.js"></script>
+  <script>
+    window.BCR_PAGE = [() => {
+      const MAGIC = window.BCR_MAGIC, GROUPS = window.BCR_GROUPS, I = window.BCR_ICONS;
+      const grid = document.querySelector("[data-grid]");
+      const chipsEl = document.querySelector("[data-chips]");
+      const search = document.querySelector("[data-search]");
+      const empty = document.querySelector("[data-empty]");
+      const groupLabel = (id) => GROUPS.find((g) => g.id === id)?.label || "";
+      const slug = (n) => n.toLowerCase().replace(/\s+/g, "-");
+      let active = "all";
+
+      // Chips
+      chipsEl.innerHTML = GROUPS.map((g) => {
+        const n = g.id === "all" ? MAGIC.length : MAGIC.filter((m) => m.group === g.id).length;
+        return `<button class="chip" type="button" data-group="${g.id}" aria-pressed="${g.id === "all"}">${g.label}<span class="count">${n}</span></button>`;
+      }).join("");
+
+      // Cards
+      grid.innerHTML = MAGIC.map((m, i) => {
+        const badge = m.original ? `<span class="mcard__badge mcard__badge--hot">Original</span>`
+          : m.featured ? `<span class="mcard__badge mcard__badge--hot">Signature</span>`
+          : m.spells ? `<span class="mcard__badge">${m.spells} spells</span>` : "";
+        return `
+        <button class="mcard reveal" type="button" style="--mc:${m.color};--d:${(i % 4) * 0.05}s" data-name="${m.name}" data-group="${m.group}" id="${slug(m.name)}">
+          <div class="card"><div class="card__in">
+            <div class="mcard__top"><span class="mcard__sigil">${window.BCR_SIGIL(m.name)}</span>${badge}</div>
+            <h3>${m.name}<small>${m.original ? "Developer's magic" : "Magic"}</small></h3>
+            <p>${m.desc}</p>
+            <div class="mcard__foot"><span>${GROUPS.find((g) => g.id === m.group)?.short || groupLabel(m.group)}</span><span>${m.showcase ? "Showcase ›" : "Details ›"}</span></div>
+          </div></div>
+        </button>`;
+      }).join("");
+
+      // Filter + search
+      function apply() {
+        const q = search.value.trim().toLowerCase();
+        let shown = 0;
+        grid.querySelectorAll(".mcard").forEach((c) => {
+          const ok = (active === "all" || c.dataset.group === active) && (!q || c.dataset.name.toLowerCase().includes(q));
+          c.hidden = !ok;
+          if (ok) { shown++; c.classList.add("is-in"); }
+        });
+        empty.hidden = shown > 0;
+      }
+      chipsEl.addEventListener("click", (e) => {
+        const b = e.target.closest(".chip"); if (!b) return;
+        active = b.dataset.group;
+        chipsEl.querySelectorAll(".chip").forEach((c) => c.setAttribute("aria-pressed", c === b));
+        apply();
+      });
+      search.addEventListener("input", apply);
+
+      // Modal
+      const modal = document.querySelector("[data-modal]");
+      const box = modal.querySelector(".modal__box");
+      let lastFocus = null;
+      function open(name, push = true) {
+        const m = MAGIC.find((x) => x.name === name); if (!m) return;
+        lastFocus = document.activeElement;
+        box.style.setProperty("--mc", m.color);
+        modal.querySelector("[data-m-sigil]").innerHTML = window.BCR_SIGIL(m.name);
+        modal.querySelector("[data-m-name]").textContent = /magic$/i.test(m.name) ? m.name : m.name + " Magic";
+        modal.querySelector("[data-m-group]").textContent = m.original ? "Developer's original magic" : groupLabel(m.group);
+        modal.querySelector("[data-m-desc]").textContent = m.desc;
+        modal.querySelector("[data-m-type]").textContent = groupLabel(m.group);
+        modal.querySelector("[data-m-spells]").textContent = m.spells ? m.spells : "See in-game";
+        const yt = m.showcase.includes("youtube");
+        modal.querySelector("[data-m-where]").textContent = m.showcase ? (yt ? "YouTube" : "Patreon") : "Coming soon";
+        modal.querySelector("[data-m-actions]").innerHTML =
+          (m.showcase ? `<a class="btn" href="${m.showcase}" target="_blank" rel="noopener">${I.play}Watch showcase</a>` : "") +
+          `<a class="btn btn--ghost" href="join.html#beta">Play it in the beta</a>`;
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        if (push) history.replaceState(null, "", "#" + slug(m.name));
+        setTimeout(() => modal.querySelector("[data-close]").focus(), 50);
+      }
+      function close() {
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+        history.replaceState(null, "", location.pathname);
+        lastFocus?.focus();
+      }
+      grid.addEventListener("click", (e) => { const c = e.target.closest(".mcard"); if (c) open(c.dataset.name); });
+      modal.addEventListener("click", (e) => { if (e.target === modal || e.target.closest("[data-close]")) close(); });
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape" && modal.classList.contains("is-open")) close(); });
+
+      // Deep link: magic.html#anti-magic
+      const openFromHash = () => {
+        const m = MAGIC.find((x) => "#" + slug(x.name) === decodeURIComponent(location.hash));
+        if (m && !modal.classList.contains("is-open")) open(m.name, false);
+      };
+      setTimeout(openFromHash, 300);
+      window.addEventListener("hashchange", openFromHash);
+    }];
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
