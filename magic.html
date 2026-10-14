@@ -27,6 +27,9 @@
         <span class="kicker reveal">Grimoire guide</span>
         <h1 class="reveal" style="--d:.06s">The Grimoires</h1>
         <p class="lead reveal" style="--d:.12s">30 magic types and 162 spells, each one rebuilt with brand-new effects for 1.21.1. Pick a grimoire to learn more and watch its showcase.</p>
+        <div class="btn-row reveal" style="--d:.18s;margin-top:26px">
+          <a class="btn btn--ghost" href="#" data-href="links.wiki" target="_blank" rel="noopener"><span data-icon="book"></span>Open the mod wiki</a>
+        </div>
       </div>
     </section>
 
@@ -73,6 +76,7 @@
           <p class="lead">Your grimoire is only the start. BCR's rework also rebuilt the tools, forms and fights that go with it.</p>
           <div class="btn-row" style="margin-top:28px">
             <a class="btn" href="index.html#devlogs">Watch the devlogs<span data-icon="arrow"></span></a>
+            <a class="btn btn--ghost" href="#" data-href="links.wiki" target="_blank" rel="noopener"><span data-icon="book"></span>Read the wiki</a>
           </div>
         </div>
         <div class="panel-list">
@@ -194,7 +198,7 @@
         modal.querySelector("[data-m-where]").textContent = m.showcase ? (yt ? "YouTube" : "Patreon") : "Coming soon";
         modal.querySelector("[data-m-actions]").innerHTML =
           (m.showcase ? `<a class="btn" href="${m.showcase}" target="_blank" rel="noopener">${I.play}Watch showcase</a>` : "") +
-          `<a class="btn btn--ghost" href="join.html#beta">Play it in the beta</a>`;
+          `<a class="btn btn--ghost" href="https://bcrepublic.fandom.com/wiki/Special:Search?query=${encodeURIComponent(/magic$/i.test(m.name) ? m.name : m.name + " Magic")}" target="_blank" rel="noopener">${I.book}Find it on the wiki</a>`;
         modal.classList.add("is-open");
         modal.setAttribute("aria-hidden", "false");
         document.body.style.overflow = "hidden";

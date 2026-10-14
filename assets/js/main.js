@@ -24,6 +24,7 @@
     instagram: s(`<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".6" fill="currentColor"/>`),
     patreon: f(`<circle cx="14.8" cy="9.6" r="6.6"/><rect x="2.6" y="3" width="3.6" height="18"/>`),
     arrow: s(`<path d="M5 12h14M13 6l6 6-6 6"/>`),
+    ext: s(`<path d="M7 17L17 7M8 7h9v9"/>`),
     external: s(`<path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>`),
     play: f(`<path d="M7 4.5v15l13-7.5-13-7.5Z"/>`),
     copy: s(`<rect x="8" y="8" width="12" height="12" rx="1"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/>`),
@@ -132,7 +133,9 @@
     { href: "store.html", label: "Store", id: "store" },
     { href: "rules.html", label: "Rules", id: "rules" },
     { href: "team.html", label: "Team", id: "team" },
+    { href: C.links.wiki, label: "Wiki", id: "wiki", external: true },
   ];
+  const ext = (n) => (n.external ? ' target="_blank" rel="noopener"' : "");
   const page = document.body.dataset.page || "";
   const now = Date.now();
   const betaStart = Date.parse(C.release.betaStart);
@@ -151,7 +154,7 @@
   }
 
   function buildChrome() {
-    const links = NAV.map((n) => `<a href="${n.href}"${n.id === page ? ' aria-current="page"' : ""}>${n.label}</a>`).join("");
+    const links = NAV.map((n) => `<a href="${n.href}"${ext(n)}${n.id === page ? ' aria-current="page"' : ""}${n.external ? ' class="nav__ext"' : ""}>${n.label}${n.external ? ICONS.ext : ""}</a>`).join("");
     const header = `
       <div class="announce" role="note">${announceHTML()}</div>
       <header class="site-header" id="top">
@@ -167,7 +170,7 @@
         </div>
       </header>
       <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
-        ${NAV.map((n) => `<a href="${n.href}"${n.id === page ? ' aria-current="page"' : ""}>${n.label}${ICONS.arrow.replace("<svg", '<svg width="22" height="22"')}</a>`).join("")}
+        ${NAV.map((n) => `<a href="${n.href}"${ext(n)}${n.id === page ? ' aria-current="page"' : ""}>${n.label}${(n.external ? ICONS.ext : ICONS.arrow).replace("<svg", '<svg width="22" height="22"')}</a>`).join("")}
         <a class="btn btn--discord btn--block" href="${C.links.discord}" target="_blank" rel="noopener">${ICONS.discord}Join the Discord</a>
         <a class="btn btn--ghost btn--block" style="margin-top:10px" href="${C.links.tiktok}" target="_blank" rel="noopener">${ICONS.tiktok}Follow on TikTok</a>
       </nav>`;
@@ -184,7 +187,7 @@
             <div class="socials">${socialsHTML()}</div>
           </div>
           <div class="footer__col"><h4>Explore</h4>
-            <a href="magic.html">Magic &amp; Grimoires</a><a href="join.html">How to Join</a><a href="join.html#beta">Closed Beta</a><a href="store.html">Store</a>
+            <a href="magic.html">Magic &amp; Grimoires</a><a href="${C.links.wiki}" target="_blank" rel="noopener">Mod Wiki</a><a href="join.html">How to Join</a><a href="join.html#beta">Closed Beta</a><a href="store.html">Store</a>
           </div>
           <div class="footer__col"><h4>Community</h4>
             <a href="${C.links.discord}" target="_blank" rel="noopener">Discord</a><a href="rules.html">Rules</a><a href="rules.html#faq">FAQ</a><a href="team.html">Staff Team</a>

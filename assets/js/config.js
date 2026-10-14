@@ -36,6 +36,7 @@ window.BCR = {
   links: {
     discord: "https://discord.gg/aAUehag5Uk",
     discordInviteCode: "aAUehag5Uk", // used to fetch the live member count
+    wiki: "https://bcrepublic.fandom.com/wiki/BCRepublic_Wiki", // the BCR mod wiki on Fandom
     patreon: "https://www.patreon.com/c/BlackCloverRepublic",
     youtube: "https://youtube.com/@blackcloverrepublic",
     tiktok: "https://www.tiktok.com/@blackcloverrepublic",

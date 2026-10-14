@@ -1116,3 +1116,8 @@ body::after { /* film grain */
 .rail-btn[hidden] { display: none; }
 @media (hover: none) { .rail-btn { display: none; } }
 @media (max-width: 600px) { .rail-btn--prev { left: -6px; } .rail-btn--next { right: -6px; } }
+
+/* External nav link (Wiki) */
+.nav__ext { display: inline-flex !important; align-items: center; gap: 4px; }
+.nav__ext svg { width: 13px; height: 13px; opacity: .7; }
+.modal [data-m-actions] .btn { padding: 0 18px; letter-spacing: .1em; }
